@@ -1,0 +1,33 @@
+text,sentiment
+I love this movie,Positive
+I hated this movie,Negative
+The food was good,Positive
+The food was bad,Negative
+I am feeling happy today,Positive
+I am feeling sad today,Negative
+The weather is amazing,Positive
+The weather is terrible,Negative
+I had a great time,Positive
+I had a terrible time,Negative
+I am exhausted,Negative
+Lot of work stress,Negative
+I feel so lucky to have such wonderful friends and family in my life,Positive
+Today is a beautiful day and I am feeling grateful for everything I have,Positive
+I just got a promotion at work and I am so proud of myself,Positive
+I had the most amazing meal last night and it made my day,Positive
+I love my job and the people I work with,Positive
+I am feeling really overwhelmed and stressed out,Negative
+Today has been a terrible day and I cannot wait for it to be over,Negative
+I just got some bad news and I do not know how to handle it,Negative
+My partner surprised me with a thoughtful gift today and it made me feel so loved,Positive
+I am so excited to start planning my next vacation,Positive
+I am so disappointed in myself for making such a big mistake,Negative
+I am feeling really lonely and it's making me sad,Negative
+I had a fight with my partner and now I feel upset and frustrated,Negative
+I had a great workout this morning and I feel energized and ready for the day,Positive
+I received some great news today and I am over the moon about it,Positive
+I am so tired of dealing with the same problems over and over again,Negative
+I am not feeling well and it is making everything else seem worse,Negative
+I am feeling really anxious and I cannot seem to shake it,Negative
+I am so sick of feeling stuck in this situation,Negative
+I am so happy to have such a supportive and caring group of friends,Positive
