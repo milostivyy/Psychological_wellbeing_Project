@@ -12,7 +12,7 @@ from sklearn.tree import DecisionTreeClassifier
 from keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from keras.models import Sequential
-from keras.layers import Dense, Embedding, LSTM, Conv1D, MaxPooling1D
+from keras.layers import Dense, Embedding, LSTM, Conv1D, MaxPooling1D ,GlobalMaxPooling1D
 
 # Load dataset
 df = pd.read_csv('sentiment_data.csv')
@@ -84,4 +84,25 @@ print("Accuracy:", accuracy_score(y_test, y_pred))
 print("Precision:", precision_score(y_test,y_pred))
 print("Confusion Matrix",confusion_matrix(y_test,y_pred))
 
+# Define CNN model
+max_len = 100
+model = Sequential()
+model.add(Embedding(max_words, 128, input_length=max_len))
+model.add(Conv1D(32, 5, activation='relu'))
+model.add(MaxPooling1D(5))
+model.add(Conv1D(64, 5, activation='relu'))
+model.add(GlobalMaxPooling1D())
+model.add(Dense(1, activation='sigmoid'))
+model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['acc'])
+
+# Train model
+model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
+
+# Evaluate model
+y_pred_probs = model.predict(X_test)
+y_pred = np.round(y_pred_probs).flatten()
+print("Convolutional Neural Network (CNN) Performance Metrics")
+print("Accuracy:", accuracy_score(y_test, y_pred))
+print("Precision:", precision_score(y_test, y_pred))
+print("Confusion Matrix",confusion_matrix(y_test, y_pred))
 
